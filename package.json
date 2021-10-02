@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
     "vue": "^3.2.16"
@@ -14,6 +15,9 @@
     "@typescript-eslint/parser": "^4.32.0",
     "@vitejs/plugin-vue": "^1.9.2",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
     "typescript": "^4.4.3",
     "vite": "^2.6.0",
     "vue-tsc": "^0.3.0"
