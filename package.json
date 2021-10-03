@@ -8,6 +8,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "primeflex": "^3.0.1",
+    "primeicons": "^4.1.0",
+    "primevue": "^3.7.2",
     "vue": "^3.2.16",
     "vue-router": "^4.0.11"
   },
