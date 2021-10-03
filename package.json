@@ -6,7 +6,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "lint": "eslint .",
-    "test:unit": "jest ."
+    "cypress": "cypress run",
+    "test:unit": "jest .",
+    "test:e2e": "start-server-and-test dev http-get://localhost:3000 cypress"
   },
   "dependencies": {
     "primeflex": "^3.0.1",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
+    "@types/node": "^16.10.2",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "@vitejs/plugin-vue": "^1.9.2",
@@ -24,6 +27,7 @@
     "cypress": "^8.5.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^7.18.0",
     "jest": "^27.2.4",
