@@ -13,7 +13,7 @@
       Template for web apps using Vue 3, Vite, and PrimeVue with PWA support.
       Also featuring:
     </div>
-    <div class="flex text-lg mt-2" id="featuring">
+    <div id="featuring" class="flex text-lg mt-2">
       <span>TypeScript</span>
       <span>Vue Router</span>
       <span>ESLint</span>
