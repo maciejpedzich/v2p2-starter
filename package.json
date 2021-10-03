@@ -6,7 +6,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "lint": "eslint .",
-    "test:unit": "jest"
+    "test:unit": "jest ."
   },
   "dependencies": {
     "primeflex": "^3.0.1",
