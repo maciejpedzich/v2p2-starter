@@ -1,6 +1,8 @@
 import { createApp } from 'vue';
 
 import PrimeVue from 'primevue/config';
+import ToastService from 'primevue/toastservice';
+
 import 'primevue/resources/primevue.min.css';
 import 'primevue/resources/themes/arya-blue/theme.css';
 import 'primeflex/primeflex.css';
@@ -11,4 +13,4 @@ import router from './router';
 
 const app = createApp(App);
 
-app.use(router).use(PrimeVue).mount('#app');
+app.use(router).use(PrimeVue).use(ToastService).mount('#app');
