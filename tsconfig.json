@@ -10,8 +10,9 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client", "@types/jest"],
+    "types": ["vite/client", "vite-plugin-pwa", "@types/jest"],
     "paths": {
       "@/*": ["src/*"]
     }
@@ -21,7 +22,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/unit/*.ts",
+    "tests/unit/*.tsx"
   ]
 }
