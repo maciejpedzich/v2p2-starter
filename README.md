@@ -24,7 +24,7 @@ Now `cd` into the project's directory and run `npm install`. That's it - you're 
 ### Starting the Vite dev server
 
 ```
-npm run build
+npm run dev
 ```
 
 ### Creating a production build
@@ -56,3 +56,7 @@ npm run test:unit
 ```
 npm run test:e2e
 ```
+
+### License
+
+MIT
