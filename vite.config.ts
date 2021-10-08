@@ -20,6 +20,11 @@ export default defineConfig({
     VitePWA({
       base: '/',
       includeAssets: ['favicon.png'],
+      workbox: {
+        cleanupOutdatedCaches: true,
+        skipWaiting: true,
+        clientsClaim: true
+      },
       manifest: {
         name: 'V2P2 Starter',
         short_name: 'V2P2',
