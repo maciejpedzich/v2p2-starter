@@ -9,15 +9,16 @@ import { useToast } from 'primevue/usetoast';
 const toast = useToast();
 const { offlineReady, needRefresh, updateServiceWorker } = useRegisterSW();
 
-const close = async () => {
+const dismissToast = async () => {
   offlineReady.value = false;
   needRefresh.value = false;
-  toast.removeGroup('reload');
 };
 
 watch(
   [offlineReady, needRefresh],
   ([newOfflineReadyValue, newNeedRefreshValue]) => {
+    toast.removeGroup('reload');
+
     if (newOfflineReadyValue || newNeedRefreshValue) {
       const detail = newOfflineReadyValue
         ? 'App is ready to work offline!'
@@ -35,7 +36,7 @@ watch(
 </script>
 
 <template>
-  <Toast id="reload-toast" position="bottom-right" group="reload">
+  <Toast position="bottom-right" group="reload">
     <template #message="slotProps">
       <div class="p-d-flex p-flex-column">
         <div class="p-text-center text-lg">
@@ -49,11 +50,11 @@ watch(
               @click="updateServiceWorker"
             ></Button>
           </div>
-          <div :class="['p-col-6', !needRefresh ? 'col-offset-4' : '']">
+          <div :class="['p-col-6', needRefresh ? '' : 'col-offset-4']">
             <Button
               class="p-button-secondary"
               label="Close"
-              @click="close"
+              @click="dismissToast"
             ></Button>
           </div>
         </div>
