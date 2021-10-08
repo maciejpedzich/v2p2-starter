@@ -5,11 +5,11 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
+    "https-preview": "serve dist",
+    "cypress": "cypress run",
     "lint": "eslint .",
     "test:unit": "jest .",
-    "test:e2e": "start-server-and-test dev http-get://localhost:3000 cypress",
-    "cypress": "cypress run",
-    "https-preview": "serve dist"
+    "test:e2e": "start-server-and-test dev http-get://localhost:3000 cypress"
   },
   "dependencies": {
     "primeflex": "^3.0.1",
@@ -40,7 +40,7 @@
     "vite": "^2.6.0",
     "vite-plugin-eslint": "^1.3.0",
     "vite-plugin-pwa": "^0.11.3",
-    "vue-tsc": "^0.3.0",
+    "vue-tsc": "^0.28.0",
     "vue3-jest": "^27.0.0-alpha.1"
   },
   "gitHooks": {
