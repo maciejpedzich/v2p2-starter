@@ -28,6 +28,7 @@ export default defineConfig({
       manifest: {
         name: 'V2P2 Starter',
         short_name: 'V2P2',
+        background_color: '#acafb6',
         theme_color: '#acafb6',
         icons: [
           {
