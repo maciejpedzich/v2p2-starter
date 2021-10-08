@@ -4,7 +4,7 @@ import ReloadToast from './components/ReloadToast.vue';
 
 <template>
   <router-view></router-view>
-  <ReloadToast />
+  <ReloadToast id="reload-toast" />
 </template>
 
 <style>
