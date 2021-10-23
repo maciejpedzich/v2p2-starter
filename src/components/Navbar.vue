@@ -4,6 +4,8 @@ import { ref } from 'vue';
 import Menubar from 'primevue/menubar';
 import { PrimeIcons } from 'primevue/api';
 
+import ThemeSwitch from './ThemeSwitch.vue';
+
 const menuItems = ref([
   {
     label: 'Home',
@@ -27,6 +29,9 @@ const menuItems = ref([
   <Menubar class="top-0 left-0 w-full fixed" :model="menuItems">
     <template #start>
       <strong class="mx-2 md:mx-5">V2P2 Starter</strong>
+    </template>
+    <template #end>
+      <ThemeSwitch />
     </template>
   </Menubar>
 </template>

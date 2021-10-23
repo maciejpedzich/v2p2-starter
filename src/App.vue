@@ -1,6 +1,13 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+import useThemeSwitch from './composables/useThemeSwitch';
+
 import Navbar from './components/Navbar.vue';
 import ReloadToast from './components/ReloadToast.vue';
+
+const { loadThemeStylesheet, prefersDarkTheme } = useThemeSwitch();
+
+onMounted(() => loadThemeStylesheet(prefersDarkTheme.value));
 </script>
 
 <template>
