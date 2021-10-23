@@ -1,9 +1,21 @@
 <script setup lang="ts">
+import Navbar from './components/Navbar.vue';
 import ReloadToast from './components/ReloadToast.vue';
 </script>
 
 <template>
-  <router-view></router-view>
+  <Navbar />
+  <div
+    class="
+      w-full
+      h-full
+      flex flex-column
+      align-items-center
+      justify-content-center
+    "
+  >
+    <router-view></router-view>
+  </div>
   <ReloadToast id="reload-toast" />
 </template>
 
