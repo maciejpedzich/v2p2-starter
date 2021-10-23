@@ -4,7 +4,6 @@ import PrimeVue from 'primevue/config';
 import ToastService from 'primevue/toastservice';
 
 import 'primevue/resources/primevue.min.css';
-import 'primevue/resources/themes/arya-blue/theme.css';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
