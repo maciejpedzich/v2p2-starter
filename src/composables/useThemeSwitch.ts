@@ -8,26 +8,10 @@ interface UseThemeSwitchReturn {
 
 export default function useThemeSwitch(): UseThemeSwitchReturn {
   const loadThemeStylesheet = async (darkPreferred: boolean) => {
-    /*
-      This is a very naive approach.
-      But I couldn't figure out how to force Vite...
-      to replace a specific style tag's content with the new one
-    */
-    const styleElements = Array.from(document.querySelectorAll('style'));
-    const currentThemeStylesheet = styleElements.find(
-      (el) => el.id !== 'theme' && el.innerText.trim().startsWith(':root')
-    );
-
-    currentThemeStylesheet?.remove();
-
     const themeName = darkPreferred ? 'arya' : 'saga';
-    const themeModule: { default: string } = await import(
-      /* @vite-ignore */
-      `../../node_modules/primevue/resources/themes/${themeName}-blue/theme.css`
-    );
+    const themeUrl = `https://unpkg.com/primevue/resources/themes/${themeName}-blue/theme.css`;
 
-    (document.querySelector('#theme') as HTMLStyleElement).textContent =
-      themeModule.default;
+    (document.querySelector('#theme') as HTMLLinkElement).href = themeUrl;
   };
 
   const prefersDarkTheme = useDark();
