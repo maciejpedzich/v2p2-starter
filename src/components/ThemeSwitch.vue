@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import InputSwitch from 'primevue/inputswitch';
-import useThemeSwitch from '../composables/useThemeSwitch';
+import { useDark } from '@vueuse/core';
 
-const { prefersDarkTheme } = useThemeSwitch();
+import InputSwitch from 'primevue/inputswitch';
+
+const prefersDarkTheme = useDark({
+  selector: 'link#theme',
+  attribute: 'href',
+  valueDark: '/themes/dark.min.css',
+  valueLight: '/themes/light.min.css'
+});
 </script>
 
 <template>
