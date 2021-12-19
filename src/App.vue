@@ -6,13 +6,7 @@ import ReloadToast from './components/ReloadToast.vue';
 <template>
   <Navbar />
   <div
-    class="
-      w-full
-      h-full
-      flex flex-column
-      align-items-center
-      justify-content-center
-    "
+    class="w-full h-full flex flex-column align-items-center justify-content-center"
   >
     <router-view></router-view>
   </div>
