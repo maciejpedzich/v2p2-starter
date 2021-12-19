@@ -8,8 +8,14 @@
     "https-preview": "serve dist",
     "cypress": "cypress run",
     "lint": "eslint .",
+    "prettier-format": "prettier --config .prettierrc --write \"src/**/*.{vue,ts}\"",
     "test:unit": "jest .",
     "test:e2e": "start-server-and-test dev http-get://localhost:3000 cypress"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier-format && npm run lint"
+    }
   },
   "dependencies": {
     "@vueuse/core": "^7.4.0",
@@ -33,6 +39,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.2.0",
     "https-localhost": "^4.7.0",
+    "husky": "^7.0.4",
     "jest": "^27.4.5",
     "prettier": "^2.5.1",
     "start-server-and-test": "^1.14.0",
@@ -43,14 +50,5 @@
     "vite-plugin-pwa": "^0.11.12",
     "vue-tsc": "^0.29.8",
     "vue3-jest": "^27.0.0-alpha.1"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "eslint .",
-      "git add"
-    ]
   }
 }
