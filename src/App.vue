@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Navbar from './components/Navbar.vue';
+import NavBar from './components/NavBar.vue';
 import ReloadToast from './components/ReloadToast.vue';
 </script>
 
 <template>
-  <Navbar />
+  <NavBar />
   <div
     class="w-full h-full flex flex-column align-items-center justify-content-center"
   >

@@ -47,7 +47,7 @@ watch(
             <Button
               class="p-button-success"
               label="Reload"
-              @click="updateServiceWorker"
+              @click="updateServiceWorker()"
             ></Button>
           </div>
           <div :class="['p-col-6', needRefresh ? '' : 'col-offset-4']">

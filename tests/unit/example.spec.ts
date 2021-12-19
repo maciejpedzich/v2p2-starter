@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
-import Home from '../../src/views/Home.vue';
+import Home from '../../src/views/HomePage.vue';
 
-describe('Home', () => {
+describe('HomePage', () => {
   it('should display proper title', () => {
     const title = 'V2P2 Starter';
     const wrapper = mount(Home);

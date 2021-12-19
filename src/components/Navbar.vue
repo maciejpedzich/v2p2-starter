@@ -2,11 +2,11 @@
 import { ref } from 'vue';
 
 import Menubar from 'primevue/menubar';
-import { PrimeIcons } from 'primevue/api';
 
-import ThemeSwitch from './ThemeSwitch.vue';
+// Don't worry about VSCode freaking out because of MenuItem
+import { PrimeIcons, MenuItem } from 'primevue/api';
 
-const menuItems = ref([
+const menuItems = ref<MenuItem[]>([
   {
     label: 'Home',
     icon: PrimeIcons.HOME,
@@ -29,9 +29,6 @@ const menuItems = ref([
   <Menubar class="top-0 left-0 w-full fixed" :model="menuItems">
     <template #start>
       <strong class="mx-2 md:mx-5">V2P2 Starter</strong>
-    </template>
-    <template #end>
-      <ThemeSwitch />
     </template>
   </Menubar>
 </template>
