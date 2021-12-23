@@ -33,6 +33,12 @@ watch(
     }
   }
 );
+
+type MessageSlotProps = {
+  message: {
+    detail: string;
+  };
+};
 </script>
 
 <template>
@@ -40,7 +46,9 @@ watch(
     <template #message="slotProps">
       <div class="p-d-flex p-flex-column">
         <div class="p-text-center text-lg">
-          <p class="mt-0">{{ slotProps.message.detail }}</p>
+          <p class="mt-0">
+            {{ (slotProps as MessageSlotProps).message.detail }}
+          </p>
         </div>
         <div class="grid w-full">
           <div v-if="needRefresh" class="p-col-6">
