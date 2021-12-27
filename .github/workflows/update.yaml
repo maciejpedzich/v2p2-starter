@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Set remote URL
-        run: git remote set-url --push origin https://maciejpedzich:${{ secrets.ACCESS_TOKEN }}@github.com/v2p2-starter
+        run: git remote set-url --push origin https://github.com/maciejpedzich/v2p2-starter
       - name: package-update
         uses: taichi/actions-package-update@master
         env:
